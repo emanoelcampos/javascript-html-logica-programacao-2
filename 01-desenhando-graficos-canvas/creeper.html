@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho Creeper</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>   
+    
+    <script>
+
+        let creeper = document.querySelector("canvas"); 
+        let pincel = creeper.getContext("2d");
+
+        //cabeça
+        pincel.fillStyle = "darkgreen";
+        pincel.fillRect(250, 100, 350, 300);
+
+        //olho
+        pincel.fillStyle = "black";
+        pincel.fillRect(300, 160, 90, 90);
+        pincel.fillRect(460, 160, 90, 90);
+
+        //nariz
+        pincel.fillStyle = "black";
+        pincel.fillRect(390, 250, 70, 100);
+
+        //boca
+        pincel.fillStyle = "black";
+        pincel.fillRect(350, 290, 40, 110);
+        pincel.fillRect(460, 290, 40, 110);
+
+    </script>
+    
+</body>
+</html>
