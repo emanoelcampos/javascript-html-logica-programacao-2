@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenha Gráficos</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaRetangulo(eixoX, eixoY, largura, altura, cores){
+
+        let tela = document.querySelector('canvas');
+        let pincel = tela.getContext('2d');  
+
+        pincel.fillStyle = cores;
+        pincel.fillRect(eixoX, eixoY, largura, altura);
+
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(eixoX, eixoY, largura, altura);
+    }
+
+    function desenhaTexto(texto, eixoX, eixoY) {
+
+        let tela = document.querySelector('canvas');
+        let pincel = tela.getContext('2d');  
+
+        pincel.font='20px monospace';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, eixoX, eixoY);
+    }
+
+    
+    function desenhaBarra(eixoX, eixoY, serie, cores, texto) {
+
+        desenhaTexto(texto, eixoX, eixoY - 10);
+
+        let somaAltura = 0;
+        for(let i = 0; i < serie.length; i++) {
+            let altura = serie[i];
+            desenhaRetangulo(eixoX, eixoY + somaAltura, 50, altura, cores[i]);
+            somaAltura = somaAltura + altura;
+
+        }
+    }
+    
+    let cores = ['blue', 'green', 'yellow', 'red'];
+    let serie2015 = [50, 25, 20, 5];
+    let serie2016 = [65, 20, 13, 2];
+    
+
+    desenhaBarra(50, 50, serie2015, cores, '2015');
+    desenhaBarra(150, 50, serie2016, cores, '2016');
+
+
+</script>
+    
+</body>
+</html>

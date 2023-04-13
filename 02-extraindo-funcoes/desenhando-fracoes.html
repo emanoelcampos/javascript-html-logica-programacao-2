@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenha Frações</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadrado(eixoX, eixoY, tamanho, cor){
+
+        let tela = document.querySelector('canvas');
+        let pincel = tela.getContext('2d');  
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(eixoX, eixoY, tamanho, tamanho);
+
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(eixoX, eixoY, tamanho, tamanho);
+    }
+
+    function desenhaTexto(texto, eixoX, eixoY) {
+
+        let tela = document.querySelector('canvas');
+        let pincel = tela.getContext('2d');  
+
+        pincel.font='20px monospace';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, eixoX, eixoY);
+    }
+
+    desenhaTexto("Qual é a fração?", 50, 25);
+    desenhaQuadrado(50, 50, 100, "orange");
+    desenhaQuadrado(150, 50, 100, "orange");
+    desenhaQuadrado(250, 50, 100, "orange");
+    desenhaQuadrado(350, 50, 100, "white");
+
+</script>
+    
+</body>
+</html>
