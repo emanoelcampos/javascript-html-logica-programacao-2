@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenhando com o ponteiro do mouse</title>
+</head>
+<body>
+
+    <h2 style="font-family: monospace;">MANTENHA O BOTÃO ESQUERDO DO MOUSE PRESSIONANDO PARA USAR O PINCEL!</h2>
+    
+    <canvas width="600" height="400"></canvas>
+    <br>
+    Escolha uma cor <input type="color">
+
+<script>
+
+    let paleta = document.querySelector("input");
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    pincel.fillStyle = 'purple';
+    pincel.fillRect(0, 0, 600, 400);
+
+    let pincelAtivo = false;
+
+
+    function desenhaNaTela(evento) {
+
+        if(pincelAtivo){
+            let x = evento.pageX - tela.offsetLeft;
+            let y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = paleta.value;
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();  
+        }
+        console.log(x + ',' + y);
+    } 
+
+    tela.onmousemove = desenhaNaTela;
+
+    function comecandoDesenho(evento){
+        pincelAtivo = true;
+    }
+
+    function parandoDesenho(evento){
+        pincelAtivo = false;
+    }
+
+    tela.onmousedown = comecandoDesenho;
+    tela.onmouseup = parandoDesenho;
+    
+</script>
+    
+</body>
+</html>
