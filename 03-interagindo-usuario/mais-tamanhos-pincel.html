@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aumente seu PINCEL!</title>
+    <title>Aumente MUITO MAIS seu PINCEL!</title>
 </head>
 <body>
 
-    <h2 style="font-family: monospace;">MANTENHA O BOTÃO SHIFT PRESSIONANDO PARA AUMENTAR O PINCEL!</h2>
+    <div>
+        <h2 style="font-family: monospace;">MANTENHA O BOTÃO SHIFT PRESSIONANDO PARA AUMENTAR O PINCEL!</h2>
+    <button onClick='window.location.reload()'>ZERAR</button>
+    </div><br>
+    
 
     <canvas width="600" height="400"></canvas>
 
@@ -18,29 +22,27 @@
     let pincel = tela.getContext('2d');
     pincel.fillStyle = 'purple';
     pincel.fillRect(0, 0, 600, 400);
-
+    let raio = 10;
 
     function desenhaNaTela(evento) {
 
         let x = evento.pageX - tela.offsetLeft;
         let y = evento.pageY - tela.offsetTop;
         let shift = evento.shiftKey;
+
+        if(shift) {
+            raio = raio + 10;
+        }
+
         pincel.fillStyle = "blue";
         pincel.beginPath();
-        if(shift){
-            pincel.arc(x, y, 30, 0, 2 * 3.14);
-        } else {
-            pincel.arc(x, y, 10, 0, 2 * 3.14);
-        }
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
         pincel.fill();
-        console.log(x + ", " + y);
 
     } 
 
-
     tela.onclick = desenhaNaTela;
-
-
+    
 </script>
     
 </body>
