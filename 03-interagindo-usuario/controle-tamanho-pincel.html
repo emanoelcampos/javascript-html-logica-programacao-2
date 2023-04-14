@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle o tamanho do PINCEL!</title>
+</head>
+<body>
+
+    <h2 style="font-family: monospace;">MANTENHA O BOTÃO SHIFT PRESSIONANDO PARA AUMENTAR O PINCEL!</h2>
+    <h2 style="font-family: monospace;">MANTENHA O BOTÃO ALT PRESSIONANDO PARA DIMINUIR O PINCEL!</h2>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    pincel.fillStyle = 'purple';
+    pincel.fillRect(0, 0, 600, 400);
+    let raio = 10;
+
+    function desenhaNaTela(evento) {
+
+        let x = evento.pageX - tela.offsetLeft;
+        let y = evento.pageY - tela.offsetTop;
+        let shift = evento.shiftKey;
+        let alt = evento.altKey;
+
+        if(shift && raio + 10 <= 40) {
+            raio = raio + 10;
+        } else if(alt && raio - 5 >= 10){
+            raio = raio -5;
+        }
+        
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+
+    } 
+
+    tela.onclick = desenhaNaTela;
+    
+</script>
+    
+</body>
+</html>
