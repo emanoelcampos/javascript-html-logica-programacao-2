@@ -12,13 +12,13 @@
 
 <script>
 
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
 
     pincel.fillStyle = 'lightgray';
     pincel.fillRect(0, 0, 600, 400);
 
-    var raio = 10;
+    let raio = 10;
 
     function desenhaCirculo(x, y, raio, cor) {
 
@@ -32,15 +32,18 @@
     desenhaCirculo(300,200, raio + 10, 'white');
     desenhaCirculo(300,200, raio, 'red'); // menor circulo
 
-    function dispara(evento) {
-
-        var x = evento.pageX - tela.offsetLeft;
-        var y = evento.pageY - tela.offsetTop;
-
-       // lógica de acerto?
+    function acertaAlvo(evento) {
+        let x = evento.pageX - tela.offsetLeft;
+        let y = evento.pageY - tela.offsetTop;
+        if ((x > 300 - raio) &&
+            (x < 300 + raio) &&
+            (y > 200 - raio) &&
+            (y < 200 + raio)) {
+        alert('Acertou no centro do alvo');
+        } 
     }
 
-    tela.onclick = dispara;
+    tela.onclick = acertaAlvo;
 
 </script>
     
