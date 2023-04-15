@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animando Bolinha</title>
+    <title>Intervalo Bolinha</title>
 </head>
 <body>
 
@@ -29,11 +29,15 @@
         pincel.clearRect(0, 0 , 600, 400);
     }
 
-    for(let x = 20; x < 600; x++){
+    let x = 20;
+    function atualizaTela() {
         limpaTela();
-        desenhaCirculo(x, 20, 10);
+        desenhaCirculo(x, 20, 10)
+        x++;
     }
-    
+
+    setInterval(atualizaTela, 10);  
+
 </script>
     
 </body>
