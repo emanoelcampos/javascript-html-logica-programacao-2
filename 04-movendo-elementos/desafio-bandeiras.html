@@ -4,59 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenhando com teclado</title>
+    <title>Bandeiras</title>
 </head>
 <body>
 
     <!-- bandeiras.html -->
 
-<canvas width="600" height="400"></canvas>
+    <canvas width="600" height="400"></canvas>
 
-<script>
+    <script>
 
-function desenhaBandeiraBrasil() {
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
+        function desenhaBandeiraBrasil() {
+            let tela = document.querySelector('canvas');
+            let pincel = tela.getContext('2d');
 
-    pincel.fillStyle="green";
-    pincel.fillRect(0, 0, 600, 400);
+            pincel.fillStyle="green";
+            pincel.fillRect(0, 0, 600, 400);
 
-    pincel.fillStyle="yellow";
-    pincel.beginPath();
-    pincel.moveTo(300, 50);
-    pincel.lineTo(50, 200);
-    pincel.lineTo(550, 200);
-    pincel.fill();
+            pincel.fillStyle="yellow";
+            pincel.beginPath();
+            pincel.moveTo(300, 50);
+            pincel.lineTo(50, 200);
+            pincel.lineTo(550, 200);
+            pincel.fill();
 
-    pincel.beginPath();
-    pincel.moveTo(50, 200);
-    pincel.lineTo(300, 350);
-    pincel.lineTo(550, 200);
-    pincel.fill();
+            pincel.beginPath();
+            pincel.moveTo(50, 200);
+            pincel.lineTo(300, 350);
+            pincel.lineTo(550, 200);
+            pincel.fill();
 
-    pincel.fillStyle="darkblue";
-    pincel.beginPath();
+            pincel.fillStyle="darkblue";
+            pincel.beginPath();
 
-    pincel.arc(300, 200, 100, 0, 2* 3.14);
-    pincel.fill();
-}
+            pincel.arc(300, 200, 100, 0, 2* 3.14);
+            pincel.fill();
+        }
 
 
-function desenhaBandeiraAlemanha() {
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
+        function desenhaBandeiraAfrica() {
+            let tela = document.querySelector('canvas');
+            let pincel = tela.getContext('2d');
 
-    pincel.fillStyle = 'black';
-    pincel.fillRect(0, 0, 600, 133);
+            pincel.fillStyle = "#009246";
+            pincel.fillRect(0, 0, 600, 133);
 
-    pincel.fillStyle = 'red';
-    pincel.fillRect(0, 133, 600, 133);
+            // desenha o retângulo amarelo
+            pincel.fillStyle = "#F1C40F";
+            pincel.fillRect(0, 133, 600, 133);
 
-    pincel.fillStyle = 'yellow';
-    pincel.fillRect(0, 266, 600, 133);
-}
+            // desenha o retângulo vermelho
+            pincel.fillStyle = "#CE1126";
+            pincel.fillRect(0, 266, 600, 134);
 
-</script>
+            // desenha a estrela branca
+            pincel.beginPath();
+            pincel.moveTo(300, 75);
+            pincel.lineTo(343, 162);
+            pincel.lineTo(443, 162);
+            pincel.lineTo(360, 215);
+            pincel.lineTo(386, 303);
+            pincel.lineTo(300, 260);
+            pincel.lineTo(214, 303);
+            pincel.lineTo(240, 215);
+            pincel.lineTo(157, 162);
+            pincel.lineTo(257, 162);
+            pincel.closePath();
+            pincel.fillStyle = "#FFFFFF";
+            pincel.fill();
+        }
+
+        let mostraBrasil = true;
+
+        function trocaBandeira() {
+            if(mostraBrasil){
+                desenhaBandeiraBrasil();
+            } else {
+                desenhaBandeiraAfrica();
+            }
+            mostraBrasil = !mostraBrasil;
+        }
+
+        setInterval(trocaBandeira, 3000)
+
+    </script>
     
 </body>
 </html>
