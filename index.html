@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="target.ico" type="image/x-icon">
     <title>Tiro ao Alvo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <canvas width="600" height="400"></canvas>
+    <h1>ACERTE O ALVO!</h1>
+    <canvas width="700" height="500"></canvas><br>
+    <button onclick="mudaDeNivel()">nível hard</button>
+    <button onclick="voltaAoNivelPadrao()">resetar</button>
 
     <script>
 
@@ -17,11 +21,14 @@
         let pincel = tela.getContext('2d');
 
         pincel.fillStyle = 'lightgray';
-        pincel.fillRect(0, 0, 600, 400);
+        pincel.fillRect(0, 0, 700, 500);
 
         let raio = 10;
-        let eixoXAleatorio = sorteiaPosicao(600);
-        let eixoYAleatorio = sorteiaPosicao(400);
+        let eixoXAleatorio = sorteiaPosicao(700);
+        let eixoYAleatorio = sorteiaPosicao(500);
+
+        let intervaloPadrao = 1000;
+        let intervaloAtual = intervaloPadrao;
 
         function desenhaCirculo(x, y, raio, cor){
             pincel.fillStyle = cor;
@@ -31,7 +38,7 @@
         }
 
         function limpaTela() {
-            pincel.clearRect(0, 0 , 600, 400);
+            pincel.clearRect(0, 0 , 700, 500);
         }
 
         function desenhaAlvo(x, y) {
@@ -46,13 +53,11 @@
 
         function atualizaTela() {
             limpaTela();
-            eixoXAleatorio = sorteiaPosicao(600);
-            eixoYAleatorio = sorteiaPosicao(400);
+            eixoXAleatorio = sorteiaPosicao(700);
+            eixoYAleatorio = sorteiaPosicao(500);
 
             desenhaAlvo(eixoXAleatorio, eixoYAleatorio);
         }
-
-        setInterval(atualizaTela, 1000);
 
         function dispara(evento) {
             let x  = evento.pageX - tela.offsetLeft;
@@ -67,8 +72,22 @@
             }
 
         }
+        
+        let intervalId = setInterval(atualizaTela, intervaloAtual);
 
         tela.onclick = dispara;
+
+        function mudaDeNivel() {
+            clearInterval(intervalId); // Para o intervalo atual
+            intervaloAtual = 500; // Altera o valor do intervalo atual para 500
+            intervalId = setInterval(atualizaTela, intervaloAtual); // Inicia o novo intervalo com o valor atualizado
+        }
+
+        function voltaAoNivelPadrao() {
+            clearInterval(intervalId); // Para o intervalo atual
+            intervaloAtual = intervaloPadrao; // Altera o valor do intervalo atual para o valor padrão
+            intervalId = setInterval(atualizaTela, intervaloAtual); // Inicia o novo intervalo com o valor atualizado
+        }
         
     </script>
     
