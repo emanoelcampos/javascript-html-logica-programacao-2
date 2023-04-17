@@ -1,6 +1,6 @@
 # JavaScript e HTML: pratique lógica com desenhos, animações e um jogo
 
-Este repositório é dedicado ao segundo curso de Javascript e HTML para iniciantes em programação com foco em lógica de programação, oferecido pela [Alura](https://cursos.alura.com.br/user/emanoelcampos) em colaboração com o programa One da Oracle. Durante o segundo curso, que é focado na prática, continuei a aprimorar a minha habilidade de programação focando na prática da lógica de programação. 
+Este repositório é dedicado ao segundo curso de Javascript e HTML para iniciantes em programação com foco em lógica de programação, oferecido pela [Alura](https://cursos.alura.com.br/user/emanoelcampos) em colaboração com o programa One da Oracle. Durante o segundo curso, o foco principal foi na prática da lógica de programação, aprimorando minha habilidade de programação por meio de exercícios e projetos práticos.
 
 ## As práticas abordadas no curso incluem:
 O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande módulo único focado na prática de lógica.
