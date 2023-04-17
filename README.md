@@ -13,8 +13,8 @@ O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande m
 
 ## Minha jornada:
 
-Grande parte do curso foi dedicada à prática da lógica, com ênfase na criação de funções para resolver problemas. Neste curso, a tag `canvas` foi apresentada para que eu pudesse continuar a praticar a lógica através da criação de desenhos na tela.Durante o curso, pude aprimorar minhas habilidades de programação através da prática constante e da revisitação de conceitos já aprendidos. No final, desenvolvi um jogo de tiro ao alvo utilizando a lógica e a tag `canvas`. 
+Grande parte do curso foi dedicada à prática da lógica, com ênfase na criação de funções para resolver problemas. Neste curso, a tag `canvas` foi apresentada para que eu pudesse continuar a praticar a lógica através da criação de desenhos na tela. Durante o curso, pude aprimorar minhas habilidades de programação através da prática constante e da revisitação de conceitos já aprendidos. No final, desenvolvi um jogo de tiro ao alvo utilizando a lógica e a tag `canvas`. 
 
 ## Aprendendo:
 
-Este curso me proporcionou uma base sólida para iniciar minha jornada na programação web e me preparou para continuar aprendendo por conta própria. Agradeço à Alura e ao programa One da Oracle por disponibilizarem essa excelente oportunidade de aprendizado.
+Este curso foi fundamental para meu desenvolvimento na área de programação web, pois me proporcionou a base sólida necessária para dar início à minha jornada. O foco na prática da lógica de programação foi fundamental para que eu pudesse aprimorar minhas habilidades e continuar aprendendo por conta própria. Agradeço à Alura e ao programa One da Oracle por disponibilizarem essa excelente oportunidade de aprendizado.
