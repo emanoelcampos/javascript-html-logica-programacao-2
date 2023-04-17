@@ -7,7 +7,7 @@ O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande m
 
 - Continuei a praticar lógica com JavaScript
 - Usei e abusei de funções para facilitar meu trabalho
-- Conheci o Canvas para gerar desenhos e animações
+- Conheci a tag `canvas` para gerar desenhos e animações
 - Revisei conceitos importantes na programação
 - Criei meu segundo jogo!
 
