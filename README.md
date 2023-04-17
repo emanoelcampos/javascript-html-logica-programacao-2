@@ -11,10 +11,13 @@ O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande m
 - Revisei conceitos importantes na programação
 - Criei meu segundo jogo!
 
-## Desafio:
+## Jogo:
 
 Durante o curso, tive a oportunidade de desenvolver um jogo de tiro ao alvo. O jogo consistia em um alvo que aparecia aleatoriamente na tela e o objetivo do jogador era acertar o centro do alvo com um clique do mouse. Para implementar o jogo, utilizei as funções aprendidas no curso, a lógica de programação e a tag canvas para gerar os desenhos na tela. A criação deste jogo foi um ótimo exercício para aplicar os ensinamentos sobre lógica e funções aprendidos durante o curso.
 
+<div align="center">
+  <img align="center" src="https://raw.githubusercontent.com/emanoelcampos/javascript-html-logica-programacao-2/master/tiro-ao-alvo-gifmp4.gif">
+</div>
 
 ## Minha jornada:
 
