@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criando alvo animado</title>
+    <title>Disparando no Alvo Animado</title>
 </head>
 <body>
 
@@ -19,6 +19,8 @@
         pincel.fillRect(0, 0, 600, 400);
 
         let raio = 10;
+        let eixoXAleatorio = sorteiaPosicao(600);
+        let eixoYAleatorio = sorteiaPosicao(400);
 
         function desenhaCirculo(x, y, raio, cor){
             pincel.fillStyle = cor;
@@ -43,14 +45,29 @@
 
         function atualizaTela() {
             limpaTela();
-            let eixoXAleatorio = sorteiaPosicao(600);
-            let eixoYAleatorio = sorteiaPosicao(400);
+            eixoXAleatorio = sorteiaPosicao(600);
+            eixoYAleatorio = sorteiaPosicao(400);
 
             desenhaAlvo(eixoXAleatorio, eixoYAleatorio);
         }
 
-
         setInterval(atualizaTela, 1000);
+
+        function dispara(evento) {
+            let x  = evento.pageX - tela.offsetLeft;
+            let y = evento.pageY - tela.offsetTop;
+
+            if((x > eixoXAleatorio - raio) && 
+                (x < eixoXAleatorio + raio) && 
+                (y > eixoYAleatorio - raio) && 
+                (y < eixoYAleatorio + raio)) {
+                    
+                alert("Acertou!");
+            }
+
+        }
+
+        tela.onclick = dispara;
         
     </script>
     
