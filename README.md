@@ -14,11 +14,12 @@ O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande m
 ## Jogo:
 
 Durante o curso, tive a oportunidade de desenvolver um [jogo de tiro ao alvo](https://emanoelcampos.github.io/javascript-html-logica-programacao-2/). O jogo consistia em um alvo que aparecia aleatoriamente na tela e o objetivo do jogador era acertar o centro do alvo com um clique do mouse. Para implementar o jogo, utilizei as funções aprendidas no curso, a lógica de programação e a tag canvas para gerar os desenhos na tela. A criação deste jogo foi um ótimo exercício para aplicar os ensinamentos sobre lógica e funções aprendidos durante o curso.
-<h3 align="center"><a href="[https://emanoelcampos.github.io/jogo-adivinhacao/](https://emanoelcampos.github.io/javascript-html-logica-programacao-2/)" target= "_blank">JOGUE AGORA!</a></h3>
 
 <div align="center">
   <img align="center" src="https://raw.githubusercontent.com/emanoelcampos/javascript-html-logica-programacao-2/master/tiro-ao-alvo-gifmp4.gif">
 </div>
+
+<h3 align="center"><a href="https://emanoelcampos.github.io/javascript-html-logica-programacao-2/" target= "_blank">JOGUE AGORA!</a></h3>
 
 ## Minha jornada:
 
