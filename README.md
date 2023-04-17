@@ -11,6 +11,11 @@ O segundo curso foi dividido em apenas 5 módulos, que juntos formam um grande m
 - Revisei conceitos importantes na programação
 - Criei meu segundo jogo!
 
+## Desafio:
+
+Durante o curso, tive a oportunidade de desenvolver um jogo de tiro ao alvo. O jogo consistia em um alvo que aparecia aleatoriamente na tela e o objetivo do jogador era acertar o centro do alvo com um clique do mouse. Para implementar o jogo, utilizei as funções aprendidas no curso, a lógica de programação e a tag canvas para gerar os desenhos na tela. A criação deste jogo foi um ótimo exercício para aplicar os ensinamentos sobre lógica e funções aprendidos durante o curso.
+
+
 ## Minha jornada:
 
 Grande parte do curso foi dedicada à prática da lógica, com ênfase na criação de funções para resolver problemas. Neste curso, a tag `canvas` foi apresentada para que eu pudesse continuar a praticar a lógica através da criação de desenhos na tela. Durante o curso, pude aprimorar minhas habilidades de programação através da prática constante e da revisitação de conceitos já aprendidos. No final, desenvolvi um jogo de tiro ao alvo utilizando a lógica e a tag `canvas`. 
